@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <p>{{ footerText }}</p>
+        <p class="py-5 bg-gray-900 border-t border-gray-800">{{ footerText }}</p>
     </footer>
 </template>
 
@@ -20,8 +20,6 @@ export default {
 
 footer {
     color: white;
-    background-color: #0D0D0D;
-    padding: 10px;
     text-align: center;
 }
 </style>

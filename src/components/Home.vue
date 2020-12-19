@@ -12,7 +12,7 @@
 
                 <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                     <div class="rounded-md shadow">
-                        <a href="#" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-white font-medium rounded-md bg-rose hover:bg-shade md:py-4 md:text-lg md:px-10">
+                        <a href="#" class="w-full flex items-center justify-center px-4 py-3 border border-transparent text-white font-medium rounded-md bg-rose hover:bg-shade md:py-4 md:text-lg md:px-10">
                             Watch now
                         </a>
                     </div>
@@ -22,135 +22,31 @@
 
 
         <!-- 2nd section -->
-        <div class="container mt-24 mx-auto px-4 pt-16">
+        <div class="container mt-12 md:mt-24 mx-auto px-4 pt-16">
             <div class="popular-movies">
                 <h2 class="tracking-wider text-rose text-lg font-semibold">
                     Popular Movies
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                     <!--Card Items Grid-->
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="../assets/img/harry.jpg" alt="" class="hover:opacity-75 transition ease-in-out duration-150">
+                    <div
+                        v-for="popularMovie in popularMovies"
+                        :key="popularMovie.id"
+                        class="mt-8"
+                    >
+                       <a href="#">
+                            <img :src="moviePosterLink(popularMovie.poster_path)"  alt="" class="hover:opacity-75 transition ease-in-out duration-150">
                         </a>
                         <div class="mt-2">
-                            <a href="#" class="text-lg mt-1 hover:text-shade">Harry Potter and the Deathly Hallows</a>
+                            <a href="#" class="text-lg mt-1 hover:text-shade">{{ popularMovie.title }}</a>
                             <div class="flex flex-wrap items-center text-sm mt-1">
-                                <span class="">star</span>
-                                <span class="mx-2">81%</span>
-                                <span>|</span>
-                                <span>14 July 2011</span>
+                                <img class="w-3" src="../assets/img/star.png" alt="">
+                                <span class="mx-1"> {{ popularMovie.vote_average *10 + "%"}} </span>
+                                <span class="mr-1">|</span>
+                                <span> {{ popularMovie.release_date}} </span>
                             </div>
                             <div class="text-sm">
-                                 Adventure, Drama, Fantasy
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="../assets/img/notebook.jpg" alt="" class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                        <div class="mt-2">
-                            <a href="#" class="text-lg mt-1 hover:text-shade">The Notebook</a>
-                            <div class="flex flex-wrap items-center text-sm mt-1">
-                                <span class="">star</span>
-                                <span class="mx-2">78%</span>
-                                <span>|</span>
-                                <span>2 July 2004</span>
-                            </div>
-                            <div class="text-sm">
-                                Drama, Romance
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="../assets/img/wolf.jpg" alt="" class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                        <div class="mt-2">
-                            <a href="#" class="text-lg mt-1 hover:text-shade">The Wolf of Wallstreet</a>
-                            <div class="flex flex-wrap items-center text-sm mt-1">
-                                <span class="">star</span>
-                                <span class="mx-2">82%</span>
-                                <span>|</span>
-                                <span>26 Dec 2013</span>
-                            </div>
-                            <div class="text-sm">
-                                 Biography, Drama, Crime
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="../assets/img/joker.jpg" alt="" class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                        <div class="mt-2">
-                            <a href="#" class="text-lg mt-1 hover:text-shade">Joker</a>
-                            <div class="flex flex-wrap items-center text-sm mt-1">
-                                <span class="">star</span>
-                                <span class="mx-2">85%</span>
-                                <span>|</span>
-                                <span>3 Oct 2019</span>
-                            </div>
-                            <div class="text-sm">
-                                 Crime, Drama, Thriller
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="../assets/img/lord.jpg" alt="" class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                        <div class="mt-2">
-                            <a href="#" class="text-lg mt-1 hover:text-shade">Lord of the Rings</a>
-                            <div class="flex flex-wrap items-center text-sm mt-1">
-                                <span class="">star</span>
-                                <span class="mx-2">87%</span>
-                                <span>|</span>
-                                <span>18 Dec 2002</span>
-                            </div>
-                            <div class="text-sm">
-                                 Adventure, Drama, Action
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="../assets/img/inception.jpg" alt="" class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                        <div class="mt-2">
-                            <a href="#" class="text-lg mt-1 hover:text-shade">Inception</a>
-                            <div class="flex flex-wrap items-center text-sm mt-1">
-                                <span class="">star</span>
-                                <span class="mx-2">88%</span>
-                                <span>|</span>
-                                <span>24 Aug 2010</span>
-                            </div>
-                            <div class="text-sm">
-                                 Adventure, Action, Sci-Fi
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="../assets/img/knight.jpeg" alt="" class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                        <div class="mt-2">
-                            <a href="#" class="text-lg mt-1 hover:text-shade">The Dark Knight Rises</a>
-                            <div class="flex flex-wrap items-center text-sm mt-1">
-                                <span class="">star</span>
-                                <span class="mx-2">84%</span>
-                                <span>|</span>
-                                <span>21 Aug 2012</span>
-                            </div>
-                            <div class="text-sm">
-                                 Adventure, Action
+                                    Adventure, Drama, Fantasy
                             </div>
                         </div>
                     </div>
@@ -166,128 +62,28 @@
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                     <!--Card Items Grid-->
-                    <div class="mt-8">
+                    <div
+                        v-for="topMovie in topMovies"
+                        :key="topMovie.id"
+                        class="mt-8"
+                    >
                         <a href="#">
-                            <img src="../assets/img/harry.jpg" alt="" class="hover:opacity-75 transition ease-in-out duration-150">
+                            <img :src="moviePosterLink(topMovie.poster_path)" alt="" class="hover:opacity-75 transition ease-in-out duration-150">
                         </a>
                         <div class="mt-2">
-                            <a href="#" class="text-lg mt-1 hover:text-shade">Harry Poter</a>
+                            <a href="#" class="text-lg mt-1 hover:text-shade">{{ topMovie.title }}</a>
                             <div class="flex flex-wrap items-center text-sm mt-1">
-                                <span class="">star</span>
-                                <span class="mx-2">81%</span>
-                                <span>|</span>
-                                <span>14 July 2011</span>
+                                <img class="w-3" src="../assets/img/star.png" alt="">
+                                <span class="mx-1">{{ topMovie.vote_average *10 + "%"}}</span>
+                                <span class="mr-1">|</span>
+                                <span> {{ topMovie.release_date}} </span>
                             </div>
-                            <div class="text-sm">
-                                 Adventure, Drama, Fantasy
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="../assets/img/notebook.jpg" alt="" class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                        <div class="mt-2">
-                            <a href="#" class="text-lg mt-1 hover:text-shade">Harry Poter</a>
-                            <div class="flex flex-wrap items-center text-sm mt-1">
-                                <span class="">star</span>
-                                <span class="mx-2">78%</span>
-                                <span>|</span>
-                                <span>2 July 2004</span>
-                            </div>
-                            <div class="text-sm">
-                                Drama, Romance
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="../assets/img/wolf.jpg" alt="" class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                        <div class="mt-2">
-                            <a href="#" class="text-lg mt-1 hover:text-shade">Harry Poter</a>
-                            <div class="flex flex-wrap items-center text-sm mt-1">
-                                <span class="">star</span>
-                                <span class="mx-2">82%</span>
-                                <span>|</span>
-                                <span>26 Dec 2013</span>
-                            </div>
-                            <div class="text-sm">
-                                 Biography, Drama, Crime
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="../assets/img/joker.jpg" alt="" class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                        <div class="mt-2">
-                            <a href="#" class="text-lg mt-1 hover:text-shade">Harry Poter</a>
-                            <div class="flex flex-wrap items-center text-sm mt-1">
-                                <span class="">star</span>
-                                <span class="mx-2">85%</span>
-                                <span>|</span>
-                                <span>3 Oct 2019</span>
-                            </div>
-                            <div class="text-sm">
-                                 Crime, Drama, Thriller
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="../assets/img/lord.jpg" alt="" class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                        <div class="mt-2">
-                            <a href="#" class="text-lg mt-1 hover:text-shade">Harry Poter</a>
-                            <div class="flex flex-wrap items-center text-sm mt-1">
-                                <span class="">star</span>
-                                <span class="mx-2">87%</span>
-                                <span>|</span>
-                                <span>18 Dec 2002</span>
-                            </div>
-                            <div class="text-sm">
-                                 Adventure, Drama, Action
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="../assets/img/inception.jpg" alt="" class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                        <div class="mt-2">
-                            <a href="#" class="text-lg mt-1 hover:text-shade">Harry Poter</a>
-                            <div class="flex flex-wrap items-center text-sm mt-1">
-                                <span class="">star</span>
-                                <span class="mx-2">88%</span>
-                                <span>|</span>
-                                <span>24 Aug 2010</span>
-                            </div>
-                            <div class="text-sm">
-                                 Adventure, Action, Sci-Fi
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="../assets/img/knight.jpeg" alt="" class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                        <div class="mt-2">
-                            <a href="#" class="text-lg mt-1 hover:text-shade">Harry Poter</a>
-                            <div class="flex flex-wrap items-center text-sm mt-1">
-                                <span class="">star</span>
-                                <span class="mx-2">84%</span>
-                                <span>|</span>
-                                <span>21 Aug 2012</span>
-                            </div>
-                            <div class="text-sm">
-                                 Adventure, Action
+                            <div
+                                v-for="genre in genres"
+                                :key="genre.id"
+                                class="text-sm"
+                            >
+                                {{ genre.name }}
                             </div>
                         </div>
                     </div>
@@ -299,10 +95,52 @@
 
 <script>
 
+
 export default {
     name: 'Home',
     components: {
 
-    }
+    },
+    data() {
+        return {
+            popularMovies: [],
+            topMovies: [],
+            genres: [],
+            tmdbApiKey: "d4a1493081489cf0da61cf46c66ed005"
+        }
+    },
+    mounted() {
+        this.getPopularMovies();
+        this.getTopMovies();
+        this.getGenres();
+    },
+
+    methods: {
+        getPopularMovies() {
+            fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${this.tmdbApiKey}`)
+            .then(response => response.json())
+            .then(data => {
+                this.popularMovies = data.results.slice(0, 10);
+            });
+        },
+        getTopMovies() {
+            fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${this.tmdbApiKey}`)
+            .then(response => response.json())
+            .then(data => {
+                this.topMovies = data.results.slice(0, 10);
+            });
+        },
+        getGenres() {
+            fetch(`https://api.themoviedb.org/3/genre/movie/list?api_key=${this.tmdbApiKey}`)
+            .then(response => response.json())
+            .then(data => {
+                this.genres = data.results;
+            });
+        },
+
+        moviePosterLink(poster_path) {
+            return `https://image.tmdb.org/t/p/w500/${poster_path}`;
+        }
+    },
 }
 </script>

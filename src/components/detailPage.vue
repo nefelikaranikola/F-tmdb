@@ -1,8 +1,8 @@
 <template>
     <div class="container mx-auto">
     <!--Section movie Info-->
-        <div class="movie-info border-b border-gray-800">
-        <div class="mx-auto px-4 py-16 flex flex-col md:flex-row">
+        <div class="m-info border-b border-gray-800">
+            <div class="container mx-auto px-4 py-16 flex flex-col md:flex-row">
             <div class="flex-none">
                 <img src="../assets/img/harry.jpg" alt="Harry">
             </div>
@@ -38,10 +38,10 @@
                     <button class="flex items-center text-white bg-rose hover:bg-shade rounded font-semibold px-5 py-4">Watch Trailler</button>
                 </div>
             </div>
+            </div>
         </div>
-    </div>
 
-    <!--Section cast Info-->
+        <!--Section cast Info-->
         <div class="movie-cast border-b border-gray-800">
             <div class="mx-auto px-4 py-16">
                 <h2 class="text-4xl font-semibold text-rose">Cast</h2>
@@ -58,35 +58,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="../assets/img/daniel.jpg" alt="" class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                        <div class="mt-2">
-                            <a href="#" class="text-lg mt-1 hover:text-shade">Daniel Radclief</a>
-                            <div class="text-sm">
-                                 Harry Potter
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="../assets/img/rupert.jpg" alt="" class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                        <div class="mt-2">
-                            <a href="#" class="text-lg mt-1 hover:text-shade">Rupert Grint</a>
-                            <div class="text-sm">
-                                Ron Wesley
-                            </div>
-                        </div>
-                    </div>
-
-
                 </div>
             </div>
         </div>
 
-    <!--Section movie Images-->
+        <!--Section movie Images-->
         <div class="movie-cast border-b border-gray-800">
             <div class="mx-auto px-4 py-16">
                 <h2 class="text-4xl font-semibold text-rose">Images</h2>
@@ -94,27 +70,7 @@
                     <!--Card Items Grid-->
                     <div class="mt-8">
                         <a href="#">
-                            <img src="../assets/img/harry.jpg" alt="" class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                    </div>
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="../assets/img/harry.jpg" alt="" class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                    </div>
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="../assets/img/harry.jpg" alt="" class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                    </div>
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="../assets/img/harry.jpg" alt="" class="hover:opacity-75 transition ease-in-out duration-150">
-                        </a>
-                    </div>
-                    <div class="mt-8">
-                        <a href="#">
-                            <img src="../assets/img/harry.jpg" alt="" class="hover:opacity-75 transition ease-in-out duration-150">
+                            <img src="../assets/img/jinny.jpg" alt="" class="hover:opacity-75 transition ease-in-out duration-150">
                         </a>
                     </div>
                 </div>
