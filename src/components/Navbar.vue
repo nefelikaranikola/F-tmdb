@@ -1,6 +1,6 @@
 <template>
     <div>
-        <nav class="border-b border-gray-800">
+        <nav class="navbar-fixed-top border-b bg-gray-900 border-gray-800">
             <div class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-6">
                 <div class="flex flex-col md:flex-row items-center">
 
@@ -26,12 +26,12 @@
                         </div>
 
                     </router-link>
-                    <router-link class="text-rose flex-center position-ref full-height hover:text-shade md:ml-6 font-semibold" to="/detail">Random</router-link>
+                    <router-link class="text-rose flex-center position-ref full-height hover:text-shade md:ml-6 font-semibold" to="/random">Random</router-link>
                 </div>
             </div>
         </nav>
 
-        <div class="container mx-auto">
+        <div class="container mx-auto pt-40">
             <router-view />
         </div>
     </div>
@@ -88,7 +88,7 @@ import Popper from "popper.js";
                     {
                         id: 2,
                         name: 'Random',
-                        path: '/detail',
+                        path: '/random',
                     }
                 ],
 
@@ -108,3 +108,13 @@ import Popper from "popper.js";
         }
     }
 </script>
+
+<style>
+.navbar-fixed-top {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 1030;
+}
+</style>

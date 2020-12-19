@@ -2,7 +2,9 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '@/components/Home.vue'
 import Genres from '@/components/Genres.vue'
-import detailPage from '@/components/detailPage.vue'
+import DetailPage from '@/components/DetailPage.vue'
+import Categories from '@/components/Categories.vue'
+import Random from '@/components/Random.vue'
 //import NotFound from '@/components/NotFound.vue'
 
 Vue.use(VueRouter);
@@ -14,9 +16,9 @@ const routes = [
     component: Home
   },
   {
-    path: '/detail',
-    name: 'detailPage',
-    component: detailPage
+    path: '/detail/:movieId',
+    name: 'DetailPage',
+    component: DetailPage
   },
   {
     path: '/genres',
@@ -26,6 +28,16 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     //component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
     component: Genres
+  },
+  {
+    path: '/random',
+    name: 'Random',
+    component: Random
+  },
+  {
+    path: '/categories',
+    name: 'Categories',
+    component: Categories
   },
   //{
     //path: '*',
