@@ -62,7 +62,7 @@ export default {
             });
         },
         imageLink(filePath) {
-            return `https://image.tmdb.org/t/p/w500/${filePath}`;
+            return `https://image.tmdb.org/t/p/w500${filePath}`;
         }
     }
 }
