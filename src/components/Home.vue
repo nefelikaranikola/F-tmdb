@@ -16,6 +16,7 @@
           random one!
         </p>
 
+    <!-- Hero section button which links to a random movie -->
         <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
           <router-link class="rounded-md shadow" to="/random">
             <a
@@ -30,6 +31,7 @@
     </main>
 
     <!-- 2nd section -->
+    <!-- Display Top 10 Popular movies -->
     <div class="container mt-16 md:mt-16 mx-auto px-4 pt-16">
       <div class="popular-movies">
         <h2 class="tracking-wider text-rose text-lg font-semibold">
@@ -77,6 +79,7 @@
     </div>
 
     <!-- 3rd section -->
+    <!-- Display Top 10 rated movies -->
     <div class="container mt-16 mx-auto px-4 pt-16">
       <div class="playing-now">
         <h2 class="tracking-wider text-rose text-lg font-semibold">
